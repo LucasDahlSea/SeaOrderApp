@@ -16,31 +16,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yTf-MG-5c7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yTf-MG-5c7">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="rdA-o0-QTd" customClass="SpecCell" customModule="OrderApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SpecCell" rowHeight="120" id="rdA-o0-QTd" customClass="SpecCell" customModule="OrderApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rdA-o0-QTd" id="qTh-i7-QYH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="CVx-Z5-Rx9">
+                                                    <rect key="frame" x="10" y="5" width="179" height="110"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hYd-eD-fWj">
+                                                            <rect key="frame" x="0.0" y="23.5" width="101.5" height="63"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spec:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1f-Dq-K3i">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="46" height="23.5"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvt-rd-d0K">
+                                                                    <rect key="frame" x="0.0" y="39.5" width="101.5" height="23.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="23.5" id="B7y-qS-dtO"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Pz0-hU-bxJ">
+                                                            <rect key="frame" x="137.5" y="23.5" width="41.5" height="63"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf9-1G-n7M">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-bf-EIr">
+                                                                    <rect key="frame" x="0.0" y="42.5" width="41.5" height="20.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20.5" id="Isb-5A-Eab"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="CVx-Z5-Rx9" secondAttribute="bottom" constant="5" id="8zz-ZH-jpL"/>
+                                                <constraint firstItem="CVx-Z5-Rx9" firstAttribute="top" secondItem="qTh-i7-QYH" secondAttribute="top" constant="5" id="a5p-6Z-379"/>
+                                                <constraint firstItem="CVx-Z5-Rx9" firstAttribute="leading" secondItem="qTh-i7-QYH" secondAttribute="leading" constant="10" id="ov5-IC-48j"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="specDescLabel" destination="eJx-bf-EIr" id="hYj-9G-Vw5"/>
+                                            <outlet property="specNumLabel" destination="yf9-1G-n7M" id="vGV-VC-agt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iun-GS-BjX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="yTf-MG-5c7" firstAttribute="trailing" secondItem="Iun-GS-BjX" secondAttribute="trailing" id="3KC-Ee-Jk2"/>
-                            <constraint firstItem="yTf-MG-5c7" firstAttribute="top" secondItem="Iun-GS-BjX" secondAttribute="top" id="abh-7V-9Rw"/>
-                            <constraint firstAttribute="bottom" secondItem="yTf-MG-5c7" secondAttribute="bottom" id="c4D-PN-NUG"/>
-                            <constraint firstItem="yTf-MG-5c7" firstAttribute="leading" secondItem="Iun-GS-BjX" secondAttribute="leading" id="yBe-q0-n5v"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Specs" id="SI4-1J-oBq"/>
+                    <connections>
+                        <outlet property="specTableView" destination="yTf-MG-5c7" id="Nzo-7q-1na"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCI-nB-n0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +115,7 @@
             </objects>
             <point key="canvasLocation" x="1041" y="439"/>
         </scene>
-        <!--Order History-->
+        <!--Order List-->
         <scene sceneID="idp-AP-81c">
             <objects>
                 <viewController storyboardIdentifier="orderListViewController" id="3j0-QC-9dp" customClass="OrderListViewController" customModule="OrderApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,10 +127,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="64" id="6wd-mK-O60" customClass="OrderCell" customModule="OrderApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderCell" rowHeight="64" id="6wd-mK-O60" customClass="OrderCell" customModule="OrderApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6wd-mK-O60" id="nuw-ur-kE4">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="OrderCell" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6wd-mK-O60" id="nuw-ur-kE4" customClass="OrderCell" customModule="OrderApp" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -93,7 +147,10 @@
                             <constraint firstItem="5Vt-Tz-Gww" firstAttribute="leading" secondItem="rkt-rD-mPe" secondAttribute="leading" id="i7m-S9-amr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Order History" id="FEw-ic-jSb"/>
+                    <tabBarItem key="tabBarItem" title="Order List" id="FEw-ic-jSb"/>
+                    <connections>
+                        <outlet property="orderHistoryTableView" destination="5Vt-Tz-Gww" id="2mu-hY-DKQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejb-uD-UuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

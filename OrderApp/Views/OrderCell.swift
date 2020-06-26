@@ -9,6 +9,9 @@ import UIKit
 
 class OrderCell: UITableViewCell {
     
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
     
 }

@@ -9,14 +9,16 @@ import Foundation
 
 class Spec {
     
+    // Properties
     var specNumber: String
     var specDescription: String
-    
+
     init(specNum: Int, specDesc: String) {
         
         specNumber = "\(specNum)"
         specDescription = specDesc
         
     }
+
     
 }
