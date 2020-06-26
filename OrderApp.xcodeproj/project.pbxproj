@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95173CD824A6AFDD0003FFC9 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95173CD724A6AFDD0003FFC9 /* OrderDetailViewController.swift */; };
 		95E9303724A66F510068B5A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9303624A66F510068B5A1 /* AppDelegate.swift */; };
 		95E9303924A66F510068B5A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9303824A66F510068B5A1 /* SceneDelegate.swift */; };
 		95E9303E24A66F510068B5A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E9303C24A66F510068B5A1 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95173CD724A6AFDD0003FFC9 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		95E9303324A66F510068B5A1 /* OrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E9303624A66F510068B5A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95E9303824A66F510068B5A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				95E9305F24A69E5F0068B5A1 /* SpecViewController.swift */,
 				95E9306124A69EA30068B5A1 /* OrderStatusController.swift */,
 				95E9306324A69F210068B5A1 /* OrderListViewController.swift */,
+				95173CD724A6AFDD0003FFC9 /* OrderDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95173CD824A6AFDD0003FFC9 /* OrderDetailViewController.swift in Sources */,
 				95E9306224A69EA30068B5A1 /* OrderStatusController.swift in Sources */,
 				95E9306424A69F210068B5A1 /* OrderListViewController.swift in Sources */,
 				95E9305C24A68D8B0068B5A1 /* SpecCell.swift in Sources */,

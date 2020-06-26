@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrderStatusController: UIViewController {
+class SpecDetailController: UIViewController {
     
     //=================
     // MARK: Properties

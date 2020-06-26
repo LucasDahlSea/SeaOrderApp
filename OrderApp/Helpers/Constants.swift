@@ -14,6 +14,8 @@ struct Constants {
     struct Storyboard {
         
         // Segues
+        static let specSegue = "toSpec"
+        static let orderDetailSegue = "toOrderDetail"
         
         // CellId's
         static let specCellId = "SpecCell"
@@ -23,9 +25,10 @@ struct Constants {
         static let mainVC = "MainVC"
         static let loginViewController = "LoginViewController"
         static let orderViewController = "OrderViewController"
-        static let orderStatusViewController = "orderStatusViewController"
+        static let specDetailController = "SpecDetailController"
         static let specViewController = "specViewController"
         static let orderListViewController = "orderListViewController"
+        static let orderDetailStatusViewController = "orderDetailStatusViewController"
         
         
     }

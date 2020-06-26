@@ -12,8 +12,11 @@ class SpecViewController: UIViewController {
     //=================
     // MARK: Properties
     //=================
+    
+    // Test data
     var specArray: [Spec] = []
     var test = Spec.init(specNum: 123456, specDesc: "box")
+    // End test data
     
     // Outlets
     @IBOutlet weak var specTableView: UITableView!
@@ -25,7 +28,8 @@ class SpecViewController: UIViewController {
         specTableView.delegate = self
         specTableView.dataSource = self
         
-        specArray.append(test)
+        
+        specArray.append(test)// Test data
         
     }
     
@@ -52,8 +56,11 @@ extension SpecViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120.0
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Trigger the segue to the spec detail controller
+        performSegue(withIdentifier: Constants.Storyboard.specSegue, sender: self)
+        
     }
     
     
