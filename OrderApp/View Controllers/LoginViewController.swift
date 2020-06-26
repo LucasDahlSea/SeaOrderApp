@@ -21,4 +21,27 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    //================
+    // MARK: IBActions
+    //================
+    
+    @IBAction func loginTapped(_ sender: Any) {
+        
+        // If the pasword is correct
+        if userNameField.text == "user" && passwordField.text == "password" {
+            
+            // Present the mainVC
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: Constants.Storyboard.mainVC) as UIViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+            
+        } else {
+            
+            // TODO: handle error
+            print("Incorrect")
+            
+        }
+    
+    }
 }

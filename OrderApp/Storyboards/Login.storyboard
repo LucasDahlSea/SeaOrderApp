@@ -34,6 +34,22 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aom-qv-i8B">
+                                <rect key="frame" x="105" y="567" width="204" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                    <color key="titleShadowColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginTapped:" destination="c2E-W5-TDZ" eventType="touchUpInside" id="ZEv-8o-WcN"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K1s-KL-k4K">
                                 <rect key="frame" x="88" y="151" width="238" height="195"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -42,11 +58,14 @@
                         <viewLayoutGuide key="safeArea" id="zTv-cj-ta5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Aom-qv-i8B" firstAttribute="leading" secondItem="zTv-cj-ta5" secondAttribute="leading" constant="105" id="5bG-0k-2AP"/>
                             <constraint firstItem="K1s-KL-k4K" firstAttribute="top" secondItem="zTv-cj-ta5" secondAttribute="top" constant="107" id="78w-Ic-nbs"/>
                             <constraint firstItem="K1s-KL-k4K" firstAttribute="leading" secondItem="zTv-cj-ta5" secondAttribute="leading" constant="88" id="DJg-vh-Cem"/>
                             <constraint firstItem="Zz8-Hc-T4a" firstAttribute="centerY" secondItem="GkQ-E7-oyP" secondAttribute="centerY" id="Mie-VG-Su2"/>
                             <constraint firstItem="zTv-cj-ta5" firstAttribute="trailing" secondItem="K1s-KL-k4K" secondAttribute="trailing" constant="88" id="Tad-pa-AmL"/>
                             <constraint firstItem="Zz8-Hc-T4a" firstAttribute="centerX" secondItem="GkQ-E7-oyP" secondAttribute="centerX" id="dd9-b5-oQP"/>
+                            <constraint firstItem="Aom-qv-i8B" firstAttribute="top" secondItem="Zz8-Hc-T4a" secondAttribute="bottom" constant="67" id="g3P-3H-znN"/>
+                            <constraint firstItem="zTv-cj-ta5" firstAttribute="trailing" secondItem="Aom-qv-i8B" secondAttribute="trailing" constant="105" id="hL9-G4-Zhs"/>
                             <constraint firstItem="Zz8-Hc-T4a" firstAttribute="top" secondItem="K1s-KL-k4K" secondAttribute="bottom" constant="50" id="hQ4-7m-Iqf"/>
                         </constraints>
                     </view>
@@ -61,6 +80,15 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

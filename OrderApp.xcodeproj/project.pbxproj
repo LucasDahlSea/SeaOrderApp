@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		95E9303724A66F510068B5A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9303624A66F510068B5A1 /* AppDelegate.swift */; };
 		95E9303924A66F510068B5A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9303824A66F510068B5A1 /* SceneDelegate.swift */; };
-		95E9303B24A66F510068B5A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9303A24A66F510068B5A1 /* ViewController.swift */; };
 		95E9303E24A66F510068B5A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E9303C24A66F510068B5A1 /* Main.storyboard */; };
 		95E9304024A66F510068B5A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95E9303F24A66F510068B5A1 /* Assets.xcassets */; };
 		95E9304324A66F510068B5A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E9304124A66F510068B5A1 /* LaunchScreen.storyboard */; };
@@ -20,13 +19,15 @@
 		95E9305924A68D460068B5A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9305824A68D460068B5A1 /* Constants.swift */; };
 		95E9305C24A68D8B0068B5A1 /* SpecCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9305B24A68D8B0068B5A1 /* SpecCell.swift */; };
 		95E9305E24A68DC50068B5A1 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9305D24A68DC50068B5A1 /* OrderCell.swift */; };
+		95E9306024A69E5F0068B5A1 /* SpecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9305F24A69E5F0068B5A1 /* SpecViewController.swift */; };
+		95E9306224A69EA30068B5A1 /* OrderStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9306124A69EA30068B5A1 /* OrderStatusController.swift */; };
+		95E9306424A69F210068B5A1 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9306324A69F210068B5A1 /* OrderListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		95E9303324A66F510068B5A1 /* OrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E9303624A66F510068B5A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95E9303824A66F510068B5A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		95E9303A24A66F510068B5A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		95E9303D24A66F510068B5A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95E9303F24A66F510068B5A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95E9304224A66F510068B5A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +39,9 @@
 		95E9305824A68D460068B5A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		95E9305B24A68D8B0068B5A1 /* SpecCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecCell.swift; sourceTree = "<group>"; };
 		95E9305D24A68DC50068B5A1 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		95E9305F24A69E5F0068B5A1 /* SpecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecViewController.swift; sourceTree = "<group>"; };
+		95E9306124A69EA30068B5A1 /* OrderStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusController.swift; sourceTree = "<group>"; };
+		95E9306324A69F210068B5A1 /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +90,11 @@
 		95E9304A24A66F670068B5A1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				95E9303A24A66F510068B5A1 /* ViewController.swift */,
 				95E9304E24A671070068B5A1 /* LoginViewController.swift */,
 				95E9305024A683FA0068B5A1 /* OrderViewController.swift */,
+				95E9305F24A69E5F0068B5A1 /* SpecViewController.swift */,
+				95E9306124A69EA30068B5A1 /* OrderStatusController.swift */,
+				95E9306324A69F210068B5A1 /* OrderListViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -199,11 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E9306224A69EA30068B5A1 /* OrderStatusController.swift in Sources */,
+				95E9306424A69F210068B5A1 /* OrderListViewController.swift in Sources */,
 				95E9305C24A68D8B0068B5A1 /* SpecCell.swift in Sources */,
 				95E9304F24A671070068B5A1 /* LoginViewController.swift in Sources */,
 				95E9305E24A68DC50068B5A1 /* OrderCell.swift in Sources */,
+				95E9306024A69E5F0068B5A1 /* SpecViewController.swift in Sources */,
 				95E9305124A683FA0068B5A1 /* OrderViewController.swift in Sources */,
-				95E9303B24A66F510068B5A1 /* ViewController.swift in Sources */,
 				95E9303724A66F510068B5A1 /* AppDelegate.swift in Sources */,
 				95E9305624A68CD60068B5A1 /* Spec.swift in Sources */,
 				95E9303924A66F510068B5A1 /* SceneDelegate.swift in Sources */,
