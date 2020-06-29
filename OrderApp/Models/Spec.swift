@@ -12,11 +12,13 @@ class Spec {
     // Properties
     var specNumber: String
     var specDescription: String
+    var palletCount: Int
 
-    init(specNum: Int, specDesc: String) {
+    init(specNum: Int, specDesc: String, pltCount: Int) {
         
         specNumber = "\(specNum)"
         specDescription = specDesc
+        palletCount = pltCount
         
     }
 

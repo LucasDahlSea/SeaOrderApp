@@ -15,7 +15,8 @@ class SpecViewController: UIViewController {
     
     // Test data
     var specArray: [Spec] = []
-    var test = Spec.init(specNum: 123456, specDesc: "box")
+    var test = Spec.init(specNum: 3096, specDesc: "50# Top", pltCount: 260)
+    var test2 = Spec.init(specNum: 3097, specDesc: "50# Bottom", pltCount: 260)
     // End test data
     
     // Outlets
@@ -30,6 +31,7 @@ class SpecViewController: UIViewController {
         
         
         specArray.append(test)// Test data
+        specArray.append(test2)
         
     }
     
@@ -39,7 +41,7 @@ extension SpecViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return specArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,8 +60,11 @@ extension SpecViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // Trigger the segue to the spec detail controller
+         // Trigger the segue to the spec detail controller
         performSegue(withIdentifier: Constants.Storyboard.specSegue, sender: self)
+//        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: Constants.Storyboard.specDetailController)
+//        VC1.modalPresentationStyle = .fullScreen
+//        self.navigationController!.present(VC1, animated: true, completion: nil)
         
     }
     

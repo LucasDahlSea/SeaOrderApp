@@ -19,7 +19,27 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        // Allows for the keyboard to hide when the user taps anywhere on the screen
+        self.setupToHideKeyboardOnTapOnView()
+        
     }
+    
+    
+    //==================
+    // MARK: - Functions
+    //==================
+    
+    
+    // These two functions will push the view up when typing on smaller devices
+    func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 150
+    }
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 150
+    }
+    
+   // TODO: Add the abbility to hide the keyboard when the user hits return
     
     //================
     // MARK: IBActions
@@ -38,10 +58,50 @@ class LoginViewController: UIViewController {
             
         } else {
             
-            // TODO: handle error
-            print("Incorrect")
+            // Create an alert
+            let alert = UIAlertController(title: "Error", message: "Incorrect password or username.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+                
+                switch action.style {
+                
+                case .default:
+                    print("Default")
+                case .cancel:
+                    print("Cancel")
+                case .destructive:
+                    print("destructive")
+                @unknown default:
+                    print("Unkown error")
+                }
+                
+            }))
+            
+            // Present the alert
+            self.present(alert, animated: true, completion: nil)
+            
             
         }
     
+    }
+}
+
+
+
+// Allows for the keyboard to be dismissed when the user taps anywhere else.
+extension UIViewController {
+    
+    func setupToHideKeyboardOnTapOnView() {
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            
+            target: self,
+            action: #selector(UIViewController.dismissKeyboard))
+
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

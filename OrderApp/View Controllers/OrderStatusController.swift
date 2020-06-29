@@ -17,5 +17,16 @@ class SpecDetailController: UIViewController {
         super.viewDidLoad()
     }
     
+    //=================
+    // MARK: IBACtions
+    //=================
+    
+    @IBAction func backTapped(_ sender: Any) {
+        
+        // Dismiss the controller
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+        
+    }
     
 }
