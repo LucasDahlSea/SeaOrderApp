@@ -35,7 +35,31 @@ class SpecViewController: UIViewController {
         
     }
     
+    //=================
+    // MARK: Functions
+    //=================
+    
+    // Used to pass the spec to the detail VC.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Check for nil values to avoid a crash - Will need when using a database
+//        guard specArray != nil && specTableView.indexPathForSelectedRow != nil else {
+//            return
+//        }
+        
+        let specDetailVC = segue.destination as? SpecDetailViewController
+        
+        if let specDetailVC = specDetailVC {
+            
+            // Set the place for the detail view contorller
+            specDetailVC.spec = specArray[specTableView.indexPathForSelectedRow!.row]
+            
+        }
+    }
+    
 }
+
+
 
 extension SpecViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -56,15 +80,15 @@ extension SpecViewController: UITableViewDelegate, UITableViewDataSource {
         cell.showSpec(s)
         
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
          // Trigger the segue to the spec detail controller
         performSegue(withIdentifier: Constants.Storyboard.specSegue, sender: self)
-//        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: Constants.Storyboard.specDetailController)
-//        VC1.modalPresentationStyle = .fullScreen
-//        self.navigationController!.present(VC1, animated: true, completion: nil)
+        
+        
         
     }
     

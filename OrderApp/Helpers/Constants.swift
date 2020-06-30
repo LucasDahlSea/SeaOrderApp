@@ -25,7 +25,7 @@ struct Constants {
         static let mainVC = "MainVC"
         static let loginViewController = "LoginViewController"
         static let orderViewController = "OrderViewController"
-        static let specDetailController = "SpecDetailController"
+        static let specDetailController = "SpecDetailViewController"
         static let specViewController = "specViewController"
         static let orderListViewController = "orderListViewController"
         static let orderDetailStatusViewController = "orderDetailStatusViewController"

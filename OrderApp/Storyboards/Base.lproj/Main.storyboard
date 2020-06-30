@@ -87,6 +87,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xav-9M-f0x" id="FO0-w1-wWN"/>
+                                    <outlet property="delegate" destination="Xav-9M-f0x" id="GP1-eD-oQ9"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iun-GS-BjX"/>
@@ -104,7 +108,7 @@
         <!--Item-->
         <scene sceneID="X1z-2j-zwt">
             <objects>
-                <viewController storyboardIdentifier="OrderViewController" id="jSz-B6-HyK" customClass="OrderViewController" customModule="OrderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderViewController" id="jSz-B6-HyK" customClass="OrderStatusViewController" customModule="OrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9JI-Pl-PJI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="161" y="1154"/>
         </scene>
-        <!--Spec Detail Controller-->
+        <!--Spec Detail View Controller-->
         <scene sceneID="ncS-se-Whe">
             <objects>
-                <viewController storyboardIdentifier="SpecDetailController" id="HSM-zq-aKf" customClass="SpecDetailController" customModule="OrderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpecDetailViewController" id="HSM-zq-aKf" customClass="SpecDetailViewController" customModule="OrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O6S-vd-TKw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,19 +145,117 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="backTapped:" destination="HSM-zq-aKf" eventType="touchUpInside" id="UfC-nB-kyI"/>
+                                    <action selector="backTapped:" destination="HSM-zq-aKf" eventType="touchUpInside" id="yeH-PF-QFp"/>
                                 </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="txZ-6s-DYb">
+                                <rect key="frame" x="20" y="154" width="189" height="228"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="hwH-tY-Rak">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="228"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spec:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC8-4L-9Zk">
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="101"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6r-mB-rrm">
+                                                <rect key="frame" x="0.0" y="141" width="99" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pallet Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5y-oo-mGA">
+                                                <rect key="frame" x="0.0" y="204.5" width="99" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="okN-eA-Qr4">
+                                        <rect key="frame" x="139" y="0.0" width="50" height="228"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhe-jk-Q1b">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqz-vN-0hq">
+                                                <rect key="frame" x="0.0" y="89" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngP-eh-Yec">
+                                                <rect key="frame" x="0.0" y="178" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add pallets to order:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5Q-tK-UL7">
+                                <rect key="frame" x="20" y="422" width="161.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mle-3Q-epG">
+                                <rect key="frame" x="20" y="485.5" width="115" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="0Qb-Oq-NTG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKe-wi-uDX">
+                                <rect key="frame" x="198" y="489" width="99" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lve-cd-Cga"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99" id="PZr-bV-M6A"/>
+                                </constraints>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HOE-Dx-KWn"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="B5Q-tK-UL7" firstAttribute="leading" secondItem="HOE-Dx-KWn" secondAttribute="leading" constant="20" id="0lw-p4-3kn"/>
+                            <constraint firstItem="HOE-Dx-KWn" firstAttribute="trailing" secondItem="uKe-wi-uDX" secondAttribute="trailing" constant="117" id="A0Y-kE-RfS"/>
+                            <constraint firstItem="uKe-wi-uDX" firstAttribute="top" secondItem="txZ-6s-DYb" secondAttribute="bottom" constant="107" id="CIQ-qt-KIz"/>
+                            <constraint firstItem="txZ-6s-DYb" firstAttribute="leading" secondItem="HOE-Dx-KWn" secondAttribute="leading" constant="20" id="D0l-1W-7fF"/>
+                            <constraint firstItem="mle-3Q-epG" firstAttribute="top" secondItem="B5Q-tK-UL7" secondAttribute="bottom" constant="40" id="KjW-nS-tlO"/>
+                            <constraint firstItem="mle-3Q-epG" firstAttribute="leading" secondItem="HOE-Dx-KWn" secondAttribute="leading" constant="20" id="OGx-V2-Rnp"/>
                             <constraint firstItem="HOE-Dx-KWn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yLz-Wd-nAq" secondAttribute="trailing" symbolic="YES" id="Sav-Ud-ERU"/>
+                            <constraint firstItem="uKe-wi-uDX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mle-3Q-epG" secondAttribute="trailing" constant="8" symbolic="YES" id="WXU-r4-9JY"/>
+                            <constraint firstItem="txZ-6s-DYb" firstAttribute="top" secondItem="yLz-Wd-nAq" secondAttribute="bottom" constant="60" id="ZqD-N9-uNz"/>
+                            <constraint firstItem="B5Q-tK-UL7" firstAttribute="top" secondItem="txZ-6s-DYb" secondAttribute="bottom" constant="40" id="bn8-Zu-fz4"/>
                             <constraint firstItem="yLz-Wd-nAq" firstAttribute="top" secondItem="HOE-Dx-KWn" secondAttribute="top" constant="20" id="dbO-2A-p7c"/>
+                            <constraint firstItem="mle-3Q-epG" firstAttribute="top" secondItem="B5Q-tK-UL7" secondAttribute="bottom" constant="40" id="h87-Fz-Jbd"/>
+                            <constraint firstItem="HOE-Dx-KWn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B5Q-tK-UL7" secondAttribute="trailing" symbolic="YES" id="l6p-cH-5GC"/>
                             <constraint firstItem="yLz-Wd-nAq" firstAttribute="leading" secondItem="HOE-Dx-KWn" secondAttribute="leading" constant="20" id="uJt-P1-oeI"/>
+                            <constraint firstItem="mle-3Q-epG" firstAttribute="leading" secondItem="HOE-Dx-KWn" secondAttribute="leading" constant="20" id="x2F-Fh-WbP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="99L-7k-xB9"/>
+                    <connections>
+                        <outlet property="specDescription" destination="Tqz-vN-0hq" id="2vl-Ma-fal"/>
+                        <outlet property="specNumber" destination="hhe-jk-Q1b" id="0Jb-3T-vSR"/>
+                        <outlet property="specPalletCount" destination="ngP-eh-Yec" id="tsh-pa-Slx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAi-QE-KGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,7 +281,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OwX-u8-HCF" kind="show" identifier="toOrderDetail" id="UYu-KV-q3d"/>
+                                            <segue destination="OwX-u8-HCF" kind="presentation" identifier="toOrderDetail" modalPresentationStyle="fullScreen" id="UYu-KV-q3d"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -208,7 +310,7 @@
             <objects>
                 <viewController storyboardIdentifier="orderDetailStatusViewController" id="OwX-u8-HCF" customClass="OrderDetailViewController" customModule="OrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vXv-ea-ERH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Tzf-OG-xa5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -241,6 +343,9 @@
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
