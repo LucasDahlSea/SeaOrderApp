@@ -13,8 +13,8 @@ class SpecCell: UITableViewCell {
     var spec: Spec?
     
     // Outlets
-    @IBOutlet weak var specNumLabel: UILabel!
     @IBOutlet weak var specDescLabel: UILabel!
+    @IBOutlet weak var specNumLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

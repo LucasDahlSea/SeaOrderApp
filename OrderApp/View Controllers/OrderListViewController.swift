@@ -58,42 +58,50 @@ extension OrderListViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = orderHistoryTableView.dequeueReusableCell(withIdentifier: Constants.Storyboard.orderCellId, for: indexPath) as! OrderCell
         
+        let o: Order
+        o = liveOrders[indexPath.row]
+        
+        cell.showOrder(o)
         
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
+
         let view = UIView()
-        
+
         // Create a label
         let label = UILabel()
         label.textColor = UIColor.white
         label.font = UIFont.boldSystemFont(ofSize: 12)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
+
         // Create constraints for the label in the view
         let leftLabelConstraint = NSLayoutConstraint(item: label, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 10)
         let topLabelConstraint = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 10)
-        
+
         // Add the label into the view
         view.addSubview(label)
-        
+
         // Add the constraints to the view
         view.addConstraints([leftLabelConstraint, topLabelConstraint])
-        
+
         // Set the label text
         if tableView.numberOfSections > 1 && section == 0 {
             label.text = "Current Order"
         } else {
             label.text = "Order History"
         }
-        
+
         // Return the view
         return view
-        
-        
+
+
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 69.5
     }
     
     

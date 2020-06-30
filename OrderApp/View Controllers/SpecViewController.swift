@@ -74,7 +74,7 @@ extension SpecViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = specTableView.dequeueReusableCell(withIdentifier: Constants.Storyboard.specCellId, for: indexPath) as! SpecCell
         
         // Get the spec
-        let s:Spec
+        let s: Spec
         s = specArray[indexPath.row]
         
         cell.showSpec(s)

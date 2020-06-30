@@ -83,7 +83,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="specDescLabel" destination="eJx-bf-EIr" id="hYj-9G-Vw5"/>
-                                            <outlet property="specNumLabel" destination="yf9-1G-n7M" id="vGV-VC-agt"/>
+                                            <outlet property="specNumLabel" destination="yf9-1G-n7M" id="Fu6-N5-q14"/>
                                             <segue destination="HSM-zq-aKf" kind="presentation" identifier="toSpec" trigger="accessoryAction" modalPresentationStyle="fullScreen" id="YuW-ny-wbB"/>
                                         </connections>
                                     </tableViewCell>
@@ -278,49 +278,49 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderCell" rowHeight="88" id="6wd-mK-O60" customClass="OrderCell" customModule="OrderApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="88"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderCell" id="6wd-mK-O60" customClass="OrderCell" customModule="OrderApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="69.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="OrderCell" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6wd-mK-O60" id="nuw-ur-kE4" customClass="OrderCell" customModule="OrderApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o2v-40-k5F">
-                                                    <rect key="frame" x="10" y="5" width="188" height="73"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="M7d-CL-Vr9">
+                                                    <rect key="frame" x="10" y="5" width="176" height="59.5"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="goQ-lU-G5Q">
-                                                            <rect key="frame" x="0.0" y="0.0" width="126.5" height="73"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="A2u-71-vv7">
+                                                            <rect key="frame" x="0.0" y="0.5" width="114.5" height="59"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zf6-gN-PCh">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="126.5" height="24.5"/>
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUV-b7-Lk9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="114.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date ordered:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOQ-Gc-OkM">
-                                                                    <rect key="frame" x="0.0" y="49.5" width="126.5" height="23.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsY-hn-KOn">
+                                                                    <rect key="frame" x="0.0" y="38.5" width="89" height="20.5"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="23.5" id="lae-4T-zHG"/>
+                                                                        <constraint firstAttribute="height" constant="20.5" id="Ldv-AJ-gO4"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="kVO-zp-hh6">
-                                                            <rect key="frame" x="146.5" y="0.0" width="41.5" height="73"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OTo-Sq-cug">
+                                                            <rect key="frame" x="134.5" y="1.5" width="41.5" height="57"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6e-It-A4N">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="21.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbc-A3-HRZ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYp-I2-Fig">
-                                                                    <rect key="frame" x="0.0" y="52.5" width="41.5" height="20.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZ5-Eq-I4Q">
+                                                                    <rect key="frame" x="0.0" y="36.5" width="41.5" height="20.5"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="20.5" id="Xgx-RN-IRg"/>
+                                                                        <constraint firstAttribute="height" constant="20.5" id="mi9-dg-2a2"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -332,15 +332,14 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="o2v-40-k5F" secondAttribute="bottom" constant="10" id="6CQ-Sa-cGS"/>
-                                                <constraint firstItem="o2v-40-k5F" firstAttribute="top" secondItem="nuw-ur-kE4" secondAttribute="top" constant="5" id="7mO-ql-JP3"/>
-                                                <constraint firstItem="o2v-40-k5F" firstAttribute="leading" secondItem="nuw-ur-kE4" secondAttribute="leading" constant="10" id="aAt-sK-Xv2"/>
-                                                <constraint firstItem="o2v-40-k5F" firstAttribute="leading" secondItem="nuw-ur-kE4" secondAttribute="leading" constant="10" id="ufg-ug-eJB"/>
+                                                <constraint firstAttribute="bottom" secondItem="M7d-CL-Vr9" secondAttribute="bottom" constant="5" id="ApD-eo-nj1"/>
+                                                <constraint firstItem="M7d-CL-Vr9" firstAttribute="leading" secondItem="nuw-ur-kE4" secondAttribute="leading" constant="10" id="tuZ-Cy-PcH"/>
+                                                <constraint firstItem="M7d-CL-Vr9" firstAttribute="top" secondItem="nuw-ur-kE4" secondAttribute="top" constant="5" id="uM1-9D-4P3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateOrderedLabel" destination="dYp-I2-Fig" id="31b-bp-Tfb"/>
-                                            <outlet property="orderNumLabel" destination="T6e-It-A4N" id="9vw-fb-1KD"/>
+                                            <outlet property="dateOrderedLabel" destination="RZ5-Eq-I4Q" id="Lfc-80-pmv"/>
+                                            <outlet property="orderNumLabel" destination="gbc-A3-HRZ" id="iAM-3F-ApX"/>
                                             <segue destination="OwX-u8-HCF" kind="presentation" identifier="toOrderDetail" modalPresentationStyle="fullScreen" id="UYu-KV-q3d"/>
                                         </connections>
                                     </tableViewCell>
@@ -425,7 +424,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQy-Ke-i57" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-728" y="94"/>
+            <point key="canvasLocation" x="-1184" y="439"/>
         </scene>
     </scenes>
     <resources>

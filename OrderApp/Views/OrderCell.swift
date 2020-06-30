@@ -29,7 +29,8 @@ class OrderCell: UITableViewCell {
         // Get the order
         order = o
         
-        //orderNumLabel.text = o.orderNum
+        orderNumLabel.text = "\(o.orderNum)"
+        dateOrderedLabel.text = "\(o.orderTime)"
         
         
     }
