@@ -13,4 +13,17 @@ class OrderDetailViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    
+    //=================
+    // MARK: IBACtions
+    //=================
+    
+    @IBAction func dismissedTapped(_ sender: Any) {
+        
+        // Dismiss the viewController
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
 }

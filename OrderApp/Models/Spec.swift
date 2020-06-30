@@ -13,6 +13,7 @@ class Spec {
     var specNumber: String
     var specDescription: String
     var palletCount: Int
+    var palletsOrdered = 0
 
     init(specNum: Int, specDesc: String, pltCount: Int) {
         
