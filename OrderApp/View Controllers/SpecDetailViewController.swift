@@ -20,6 +20,7 @@ class SpecDetailViewController: UIViewController {
     @IBOutlet weak var specNumber: UILabel!
     @IBOutlet weak var specDescription: UILabel!
     @IBOutlet weak var specPalletCount: UILabel!
+    @IBOutlet weak var palletsToAddTextField: UITextField!
     
     
     override func viewDidLoad() {
@@ -31,6 +32,9 @@ class SpecDetailViewController: UIViewController {
             showSpec(spec!)
             
         }
+        
+        // Set the palletText field to numerical pad
+        self.palletsToAddTextField.keyboardType = .numberPad
         
     }
     
@@ -60,5 +64,9 @@ class SpecDetailViewController: UIViewController {
         
     }
     
+    @IBAction func addPallet(_ sender: Any) {
+        
+        
+    }
     
 }

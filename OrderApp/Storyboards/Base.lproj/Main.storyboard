@@ -228,6 +228,9 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addPallet:" destination="HSM-zq-aKf" eventType="touchUpInside" id="AGL-0W-56y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HOE-Dx-KWn"/>
@@ -252,6 +255,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="99L-7k-xB9"/>
                     <connections>
+                        <outlet property="palletsToAddTextField" destination="mle-3Q-epG" id="DmS-fk-zJP"/>
                         <outlet property="specDescription" destination="Tqz-vN-0hq" id="2vl-Ma-fal"/>
                         <outlet property="specNumber" destination="hhe-jk-Q1b" id="0Jb-3T-vSR"/>
                         <outlet property="specPalletCount" destination="ngP-eh-Yec" id="tsh-pa-Slx"/>
