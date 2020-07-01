@@ -7,16 +7,21 @@
 
 import UIKit
 
-
 class OrderViewController: UIViewController {
     
     //=================
     // MARK: Properties
     //=================
-    
+    var order: Order?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func placeOrderTapped(_ sender: Any) {
+    }
+    
+    @IBAction func clearOrdertapped(_ sender: Any) {
     }
     
 }

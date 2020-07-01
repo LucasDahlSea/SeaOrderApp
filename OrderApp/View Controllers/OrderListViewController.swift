@@ -14,8 +14,10 @@ class OrderListViewController: UIViewController {
     //=================
     var orderHistory: [Order] = []
     var liveOrders: [Order] = []
-    var test = Order.init(orderTime: "6/30/20", orderNumber: 2, eta: "7/1/20")
-    var test2 = Order.init(orderTime: "6/29/20", orderNumber: 1, eta: "6/29/20")
+    var test = Order.init(orderTime: "6/30/20", orderNumber: 256868, eta: "7/1/20")
+    var test2 = Order.init(orderTime: "6/29/20", orderNumber: 15468, eta: "6/29/20")
+    var testSpec = Spec.init(specNum: 3096, specDesc: "50# top", pltCount: 260)
+    var testSpec2 = Spec.init(specNum: 3097, specDesc: "50# btm", pltCount: 260)
     
     
     // Outlets
@@ -31,7 +33,31 @@ class OrderListViewController: UIViewController {
         // MARK: Test data
         liveOrders.append(test)
         orderHistory.append(test2)
+        testSpec.palletsOrdered = 2
+        testSpec2.palletsOrdered = 2
+        test.bolNum = 56568
+        test.specsOrdered.append(testSpec)
+        test.specsOrdered.append(testSpec2)
         
+        
+    }
+    
+    // Used to pass the spec to the detail VC.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Check for nil values to avoid a crash - Will need when using a database
+//        guard specArray != nil && specTableView.indexPathForSelectedRow != nil else {
+//            return
+//        }
+        
+        let orderDetailVC = segue.destination as? OrderDetailViewController
+        
+        if let specDetailVC = orderDetailVC {
+            
+            // Set the place for the detail view contorller
+            specDetailVC.order = liveOrders[orderHistoryTableView.indexPathForSelectedRow!.row]
+            
+        }
     }
     
 }

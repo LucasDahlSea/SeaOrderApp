@@ -15,6 +15,7 @@ class SpecDetailViewController: UIViewController {
     //=================
     
     var spec: Spec?
+    var orderedArray: [Spec] = []
     
     // Outlets
     @IBOutlet weak var specNumber: UILabel!
@@ -66,7 +67,15 @@ class SpecDetailViewController: UIViewController {
     
     @IBAction func addPallet(_ sender: Any) {
         
+        if spec != nil {
+            
+            //spec!.palletsOrdered += spec!.palletCount * numOrdered
+            spec!.palletsOrdered += Int(palletsToAddTextField.text!)!
+            
+        }
         
+        orderedArray.append(spec!)
+ 
     }
     
 }

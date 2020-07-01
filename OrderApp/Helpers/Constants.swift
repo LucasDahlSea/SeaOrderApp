@@ -20,6 +20,7 @@ struct Constants {
         // CellId's
         static let specCellId = "SpecCell"
         static let orderCellId = "OrderCell"
+        static let orderDetailListCellId = "ListCell"
         
         // Storyboards
         static let mainVC = "MainVC"
@@ -29,6 +30,7 @@ struct Constants {
         static let specViewController = "specViewController"
         static let orderListViewController = "orderListViewController"
         static let orderDetailStatusViewController = "orderDetailStatusViewController"
+        static let settingsViewController = "SettingsViewController"
         
         
     }

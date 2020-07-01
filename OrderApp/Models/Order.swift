@@ -12,13 +12,14 @@ class Order {
     //===================
     // MARK: - Properties
     //===================
-    var specsOrder: [Spec] = []
+    var specsOrdered: [Spec] = []
     var orderTime: String
     var orderNum: Int
     var orderRecieved = false
     var shiped = false
     var orderETA: String?
     var bolNum: Int?
+    var dateNeeded: String?
     
     init(orderTime: String, orderNumber: Int, eta: String) {
         

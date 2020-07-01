@@ -10,6 +10,7 @@
 		95173CD824A6AFDD0003FFC9 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95173CD724A6AFDD0003FFC9 /* OrderDetailViewController.swift */; };
 		9524CBA624AA8A2900A3D093 /* SpecDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524CBA524AA8A2900A3D093 /* SpecDetailViewController.swift */; };
 		95411F2824AB7D0000D39113 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95411F2724AB7D0000D39113 /* Order.swift */; };
+		957595A524AD13CF00D78861 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957595A424AD13CF00D78861 /* ListCell.swift */; };
 		95E9303724A66F510068B5A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9303624A66F510068B5A1 /* AppDelegate.swift */; };
 		95E9303924A66F510068B5A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9303824A66F510068B5A1 /* SceneDelegate.swift */; };
 		95E9303E24A66F510068B5A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E9303C24A66F510068B5A1 /* Main.storyboard */; };
@@ -17,13 +18,12 @@
 		95E9304324A66F510068B5A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E9304124A66F510068B5A1 /* LaunchScreen.storyboard */; };
 		95E9304D24A66F990068B5A1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E9304C24A66F990068B5A1 /* Login.storyboard */; };
 		95E9304F24A671070068B5A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9304E24A671070068B5A1 /* LoginViewController.swift */; };
-		95E9305124A683FA0068B5A1 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9305024A683FA0068B5A1 /* OrderViewController.swift */; };
 		95E9305624A68CD60068B5A1 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9305524A68CD60068B5A1 /* Spec.swift */; };
 		95E9305924A68D460068B5A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9305824A68D460068B5A1 /* Constants.swift */; };
 		95E9305C24A68D8B0068B5A1 /* SpecCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9305B24A68D8B0068B5A1 /* SpecCell.swift */; };
 		95E9305E24A68DC50068B5A1 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9305D24A68DC50068B5A1 /* OrderCell.swift */; };
 		95E9306024A69E5F0068B5A1 /* SpecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9305F24A69E5F0068B5A1 /* SpecViewController.swift */; };
-		95E9306224A69EA30068B5A1 /* OrderStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9306124A69EA30068B5A1 /* OrderStatusViewController.swift */; };
+		95E9306224A69EA30068B5A1 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9306124A69EA30068B5A1 /* OrderViewController.swift */; };
 		95E9306424A69F210068B5A1 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9306324A69F210068B5A1 /* OrderListViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +31,7 @@
 		95173CD724A6AFDD0003FFC9 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		9524CBA524AA8A2900A3D093 /* SpecDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecDetailViewController.swift; sourceTree = "<group>"; };
 		95411F2724AB7D0000D39113 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		957595A424AD13CF00D78861 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		95E9303324A66F510068B5A1 /* OrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E9303624A66F510068B5A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95E9303824A66F510068B5A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,13 +41,12 @@
 		95E9304424A66F510068B5A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95E9304C24A66F990068B5A1 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		95E9304E24A671070068B5A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		95E9305024A683FA0068B5A1 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		95E9305524A68CD60068B5A1 /* Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
 		95E9305824A68D460068B5A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		95E9305B24A68D8B0068B5A1 /* SpecCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecCell.swift; sourceTree = "<group>"; };
 		95E9305D24A68DC50068B5A1 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		95E9305F24A69E5F0068B5A1 /* SpecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecViewController.swift; sourceTree = "<group>"; };
-		95E9306124A69EA30068B5A1 /* OrderStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusViewController.swift; sourceTree = "<group>"; };
+		95E9306124A69EA30068B5A1 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		95E9306324A69F210068B5A1 /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,9 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				95E9304E24A671070068B5A1 /* LoginViewController.swift */,
-				95E9305024A683FA0068B5A1 /* OrderViewController.swift */,
 				95E9305F24A69E5F0068B5A1 /* SpecViewController.swift */,
-				95E9306124A69EA30068B5A1 /* OrderStatusViewController.swift */,
+				95E9306124A69EA30068B5A1 /* OrderViewController.swift */,
 				95E9306324A69F210068B5A1 /* OrderListViewController.swift */,
 				95173CD724A6AFDD0003FFC9 /* OrderDetailViewController.swift */,
 				9524CBA524AA8A2900A3D093 /* SpecDetailViewController.swift */,
@@ -139,6 +138,7 @@
 			children = (
 				95E9305B24A68D8B0068B5A1 /* SpecCell.swift */,
 				95E9305D24A68DC50068B5A1 /* OrderCell.swift */,
+				957595A424AD13CF00D78861 /* ListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,14 +215,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				95173CD824A6AFDD0003FFC9 /* OrderDetailViewController.swift in Sources */,
-				95E9306224A69EA30068B5A1 /* OrderStatusViewController.swift in Sources */,
+				95E9306224A69EA30068B5A1 /* OrderViewController.swift in Sources */,
 				95E9306424A69F210068B5A1 /* OrderListViewController.swift in Sources */,
 				95E9305C24A68D8B0068B5A1 /* SpecCell.swift in Sources */,
 				95E9304F24A671070068B5A1 /* LoginViewController.swift in Sources */,
 				95E9305E24A68DC50068B5A1 /* OrderCell.swift in Sources */,
 				95411F2824AB7D0000D39113 /* Order.swift in Sources */,
 				95E9306024A69E5F0068B5A1 /* SpecViewController.swift in Sources */,
-				95E9305124A683FA0068B5A1 /* OrderViewController.swift in Sources */,
+				957595A524AD13CF00D78861 /* ListCell.swift in Sources */,
 				95E9303724A66F510068B5A1 /* AppDelegate.swift in Sources */,
 				95E9305624A68CD60068B5A1 /* Spec.swift in Sources */,
 				9524CBA624AA8A2900A3D093 /* SpecDetailViewController.swift in Sources */,
