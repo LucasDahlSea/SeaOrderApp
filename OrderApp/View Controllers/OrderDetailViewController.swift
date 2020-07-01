@@ -62,7 +62,7 @@ extension OrderDetailViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Create the cell
-        let cell = orderDetailListTableView.dequeueReusableCell(withIdentifier: Constants.Storyboard.orderDetailListCellId) as! ListCell
+        let cell = orderDetailListTableView.dequeueReusableCell(withIdentifier: Constants.Storyboard.orderDetailListCellId) as! listCell
         
         // Make the cell not highlight
         cell.selectionStyle = .none
