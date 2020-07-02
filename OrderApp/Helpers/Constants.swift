@@ -31,6 +31,7 @@ struct Constants {
         static let orderListViewController = "orderListViewController"
         static let orderDetailStatusViewController = "orderDetailStatusViewController"
         static let settingsViewController = "SettingsViewController"
+        static let accountViewController = "AccountViewController"
         
         
     }

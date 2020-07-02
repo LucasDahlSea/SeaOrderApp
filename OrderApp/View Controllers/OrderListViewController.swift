@@ -99,7 +99,7 @@ extension OrderListViewController: UITableViewDelegate, UITableViewDataSource {
 
         // Create a label
         let label = UILabel()
-        label.textColor = UIColor.white
+        label.textColor = UIColor.black
         label.font = UIFont.boldSystemFont(ofSize: 12)
         label.translatesAutoresizingMaskIntoConstraints = false
 
