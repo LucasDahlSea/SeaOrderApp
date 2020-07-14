@@ -21,6 +21,7 @@ struct Constants {
         static let specCellId = "SpecCell"
         static let orderCellId = "OrderCell"
         static let orderDetailListCellId = "ListCell"
+        static let orderPreviewCell = "orderPreviewCell"
         
         // Storyboards
         static let mainVC = "MainVC"
