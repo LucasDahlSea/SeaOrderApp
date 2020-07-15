@@ -14,11 +14,7 @@ class OrderListViewController: UIViewController {
     //=================
     var orderHistory: [Order] = []
     var liveOrders: [Order] = []
-    var test = Order.init(orderTime: "6/30/20", orderNumber: 256868, eta: "7/1/20")
-    var test2 = Order.init(orderTime: "6/29/20", orderNumber: 15468, eta: "6/29/20")
-    var testSpec = Spec.init(specNum: 3096, specDesc: "50# top", pltCount: 260)
-    var testSpec2 = Spec.init(specNum: 3097, specDesc: "50# btm", pltCount: 260)
-    
+
     
     // Outlets
     @IBOutlet weak var orderHistoryTableView: UITableView!
@@ -29,15 +25,6 @@ class OrderListViewController: UIViewController {
         // Setup the tableCiew
         orderHistoryTableView.delegate = self
         orderHistoryTableView.dataSource = self
-        
-        // MARK: Test data
-        liveOrders.append(test)
-        orderHistory.append(test2)
-        testSpec.palletsOrdered = 2
-        testSpec2.palletsOrdered = 2
-        test.bolNum = 56568
-        test.specsOrdered.append(testSpec)
-        test.specsOrdered.append(testSpec2)
         
         
     }

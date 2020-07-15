@@ -13,12 +13,6 @@ class SpecViewController: UIViewController {
     // MARK: Properties
     //=================
     
-    // Test data
-    var specArray: [Spec] = []
-    var test = Spec.init(specNum: 3096, specDesc: "50# Top", pltCount: 260)
-    var test2 = Spec.init(specNum: 3097, specDesc: "50# Bottom", pltCount: 260)
-    // End test data
-    
     // Outlets
     @IBOutlet weak var specTableView: UITableView!
     
@@ -28,10 +22,7 @@ class SpecViewController: UIViewController {
         
         specTableView.delegate = self
         specTableView.dataSource = self
-        
-        
-        specArray.append(test)// Test data
-        specArray.append(test2)
+
         
     }
     
