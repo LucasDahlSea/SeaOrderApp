@@ -7,9 +7,8 @@
 
 import Foundation
 
-
+// A list of all storyboard constants to help reduce naming errors when being called or referenced.
 struct Constants {
-    
     
     struct Storyboard {
         
@@ -33,7 +32,6 @@ struct Constants {
         static let orderDetailStatusViewController = "orderDetailStatusViewController"
         static let settingsViewController = "SettingsViewController"
         static let accountViewController = "AccountViewController"
-        
         
     }
     
